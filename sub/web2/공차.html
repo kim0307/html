@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공차</title>
+    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  <style>
+    @import url(https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+}
+/* header */
+header {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    font-family: 'Nanum Gothic';
+    font-size: 17px;
+    font-weight: 700;
+}
+header.on {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        background-color: #f5eee8;
+        top: 0;
+        left: 0;
+        z-index: 9;
+}
+header nav {
+    height: 100%;
+    text-align: center;
+}  
+header nav > ul {
+    display: flex;
+    height: 100%;
+}
+header nav > ul .depth01 > a {
+    padding: 0 70px;
+    line-height: 100px;
+}
+header nav > ul .depth01 .depth02 {
+    background-color: rgba(51, 51, 51, 0.521);
+    padding: 30px 0;
+    display: none;
+    position: relative;
+    z-index: 9;
+}
+header nav > ul .depth01 .depth02 li {
+    line-height: 2;
+}
+header nav > ul .depth01:hover .depth02 {
+    display: block;
+}
+ /* 슬라이드 초기값 */
+ .swiper {
+    width: 1280px;
+    height: 730px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    background: rgb(215, 215, 215);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 730px;
+    object-fit: cover;
+  }
+/* .main_visual */
+
+  .main_visual {
+    height: 730px;
+    width: 100%;
+  }
+  .main_visual .swiper-button-prev {
+    --swiper-theme-color: rgb(0, 0, 0);
+  }
+  .main_visual .swiper-pagination {
+    --swiper-theme-color: rgb(189, 255, 189);
+  }
+  /* .cont01 */
+  /* img w270 h290 */
+  .cont01 {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .cont01 .title h1 {
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  .cont01 .title h1::before {
+    content: url(img/imgaf.png);
+  }
+  .cont01 .title h1::after {
+    content: url(./img/imgbe.png);
+  }
+  .cont01 .all_list {
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cont01 .item > img {
+    width: 270px;
+    height: 290px;
+  }
+  .cont01 .list ul {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .cont02 {
+    width: 1280px;
+    height: 360px;
+    margin: 70px auto 100px;
+  }
+  .cont02 .title h1 {
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  .cont02 .title h1::before {
+    content: url(img/imgaf.png);
+  }
+  .cont02 .title h1::after {
+    content: url(./img/imgbe.png);
+  }
+  .cont02 .list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cont02 .tit {
+    margin-left: 74px;
+    line-height: 2;
+  }
+  .cont02 .tit .main {
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .cont02 .tit .txt {
+    font-size: 15px;
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+  }
+  .cont02 .tit .txt2 {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #993b42;
+  }
+  /* .cont03 */
+  .cont03 {
+    width: 2060px;
+    margin: 100px auto 0;
+    height: 650px;
+    background-color: #f5eee8;
+  }
+  .cont03 .title {
+    margin-left: 790px;
+  }
+  .cont03 .title h1 {
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    margin-left: 60px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .cont03 .title h1::before {
+    content: url(img/imgaf.png);
+  }
+  .cont03 .title h1::after {
+    content: url(./img/imgbe.png);
+  }
+  .cont03 .title h2 {
+    font-size: 32px;
+    font-family: 'Nanum Myeongjo';
+    font-style: normal;
+    font-weight: 400;
+  }
+  .cont03 .tab_menu {
+    width: 320px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    margin-left: 1300px;
+    color: #993b42;
+    font-size: 15px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+  }
+  .cont03 .tab_menu ul {
+        display: flex;
+    }
+    .cont03 .tab_menu ul li {
+        width: 100px;
+        position: relative;
+        z-index: 9;
+    }
+    .cont03 .bar {
+        width: 100px;
+        height: 100%;
+        border-radius: 40px;
+        background-color: #f5eee8;
+        position: absolute;
+        left:0;
+        top: 0;
+    }
+    .cont03 .bar span {
+        position: absolute;
+        left: -999999999px;
+    }
+    .cont03 .list {
+        width: 1280px;
+        margin-left: 348px;
+    }
+    .cont03 .list .item {
+        display: flex;
+        justify-content: space-between;
+        height: 400px;
+        align-items: center;
+        display: none;
+    }
+    .cont03 .list .item.on {
+        display: flex;
+    }
+    .cont03 .list .item img {
+        object-fit: cover;
+        width: 700px;
+        height: 400px;
+    }
+    .cont03 .list .item > div {
+        width: 40%;
+        margin-left: -100px;
+    }
+    .cont03 .list .item > div h4 {
+        font-size: 24px;
+        font-family: 'Nanum Gothic';
+        font-weight: bold;
+        color: #993b42;
+        margin-bottom: 45px;
+    }
+    .cont03 .list .item > div p {
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    .cont03 .list .item > div .btn {
+        font-size: 13px;
+        font-family: 'Nanum Gothic';
+        font-weight: bold;
+        color: #993b42;
+        border: 1px solid #993b42;;
+        padding: 14px 50px;
+    }
+    .tab_menu li.on {
+        color: #fff;
+    }
+    .cont04 {
+        position: relative;
+        width: 100%;
+        height: 465px;
+        background-image: url(img/goimg11.jpg);
+        color: #eeeeee;
+    }
+    .cont04 .store {}
+    .cont04 .store .title {
+        font-family: 'Noto Sans KR';
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 65px;
+    }
+    .cont04 .store .title h1 {}
+    .cont04 .store .event_all {
+        margin-left: 410px;
+        display: flex;
+        align-items: center;
+    }
+    .cont04 .store .tit {
+        margin-left: 60px;
+    }
+    .cont04 .store .tit h4 {
+        font-size: 24px;
+        font-family: 'Nanum Gothic';
+        font-weight: bold;
+    }
+    .cont04 .store .tit p {
+        margin-top: 50px;
+        margin-bottom: 55px;
+        font-size: 16px;
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+    }
+    .cont04 .store .tit a {
+        font-size: 20px;
+        font-family: 'Nanum Gothic';
+        font-weight: bold;
+    }
+    footer {
+        width: 100%;
+        height: 130px;
+        background-color: #333;
+        padding: 20px 0;
+        color: #999;
+    }
+    footer .footerwrap {
+        width: 1000px;
+        margin: 0 auto;
+        height: 130px;
+        font-size: 14px;
+        display: flex;
+    }
+    footer .footerwrap .logo {
+        float: left;
+        margin-right: 90px;
+    }
+    footer .footerwrap .info {
+        float: left;
+    }
+    footer .footerwrap .info > ul {
+        word-spacing: 20px;
+        margin-bottom: 20px;
+        font-family: 'Nanum Gothic';
+        font-weight: bold;
+    }
+    footer .footerwrap .info address {
+        margin-bottom: 20px;
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+    }
+  </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        $(function(){
+            $('.tab_menu li').click(function(){
+                var moveLeft = $(this).position().left;
+                $('.bar').css({
+                    'left' : moveLeft,
+                    'transition' : '1s'
+                });
+                /* script */
+                $('.tab_menu li').removeClass('on');
+                $(this).addClass('on');
+                
+                $('.cont03 .item').removeClass('on');
+                $('.cont03 .item').eq($(this).index()).addClass('on');
+
+            });
+
+            var hdTop = $('header').offset().top;
+            $(window).scroll(function(){
+                console.log(hdTop);
+                var windowTop = $(window).scrollTop();
+                console.log(windowTop);
+                if(hdTop < windowTop) {
+                    $('header').addClass('on');
+                } else {
+                    $('header').removeClass('on');
+                }
+            });
+
+            var swiper = new Swiper(".main_v", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="#"><img src="img/imglogo.png" alt="로고" /></a>
+        </h1>
+        <nav>
+            <ul>
+                <li class="depth01">
+                    <a href="#">brand</a>
+                    <ul class="depth02">
+                        <li><a href="#"></a>브랜드 소개</li>
+                        <li><a href="#"></a>공차의 약속</li>
+                        <li><a href="#"></a>브랜드 아이덴티티</li>
+                        <li><a href="#"></a>세계속의 공차</li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+
+                <li class="depth01">
+                    <a href="#">menu</a>
+                    <ul class="depth02">
+                        <li><a href="#"></a>주문방법</li>
+                        <li><a href="#"></a>음료</li>
+                        <li><a href="#"></a>빙수</li>
+                        <li><a href="#"></a>디저트</li>
+                        <li><a href="#"></a>MD상품</li>
+                        <li><a href="#"></a>티스토리</li>
+                        <li><a href="#"></a>티레시피</li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+
+                <li class="depth01">
+                    <a href="#">store</a>
+                    <ul class="depth02">
+                        <li><a href="#"></a>매장 찾기</li>
+                        <li><a href="#"></a>가맹점 개설문의</li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+                
+                <li class="depth01">
+                    <a href="#">Membership</a>
+                    <ul class="depth02">
+                        <li><a href="#"></a>NEW 공차 멤버십</li>
+                        <li><a href="#"></a>공차 카드 & e-Gift</li>
+                        <li><a href="#"></a>FAQ</li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+
+                <li class="depth01">
+                    <a href="#">Benefit</a>
+                    <ul class="depth02">
+                        <li><a href="#"></a>통신사 제휴</li>
+                        <li><a href="#"></a>결제 서비스</li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+
+                <li class="depth01">
+                    <a href="#">Event&News</a>
+                    <ul class="depth02">
+                        <li><a href="#"></a>이벤트</li>
+                        <li><a href="#"></a>공차소식</li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+            </ul>
+        </nav>
+    </header>
+    <section class="main_visual">
+        <!-- Swiper -->
+        <div class="swiper main_v">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/img001.jpg" alt="메인" />
+                </div><!-- 1 -->
+                <div class="swiper-slide">
+                    <img src="img/goimg08.jpg" alt="메인" />
+                </div><!-- 2 -->
+                <div class="swiper-slide">
+                    <img src="img/goimg12.jpg" alt="메인" />
+                </div><!-- 3 -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- .main_visual end -->
+    <!-- tea -->
+    <div class="cont01">
+        <div class="title">
+            <h1>
+                <strong>
+                    2022 골든펄 시즌 음료
+                </strong>
+            </h1>
+        </div><!-- .title -->
+        <div class="all_list">
+            <div class="list">
+                <ul>
+                    <h2>골든펄 돌체 밀크티</h2>
+                </ul>
+                <div class="item">
+                    <img src="img/goimg04.png" alt="공차" />
+                </div><!-- .item end -->
+            </div><!-- .list01 end -->   
+            <div class="list">
+                <ul>
+                    <h2>골든펄 돌체 밀크티 스무디 </h2>
+                </ul>
+                <div class="item">
+                    <img src="img/goimg05.png" alt="공차" />
+                </div><!-- .item end -->
+            </div><!-- .list02 end -->   
+            <div class="list">
+                <ul>
+                    <h2>골든펄 딸기 캐모마일티</h2>
+                </ul>
+                <div class="item">
+                    <img src="img/goimg06.png" alt="공차" />
+                </div><!-- .item end -->
+            </div><!-- .list03 end -->   
+            <div class="list">
+                <ul>
+                    <h2>골든펄 망고 패션프릇 그린티</h2>
+                </ul>
+                <div class="item">
+                    <img src="img/goimg07.png" alt="공차" /> 
+                </div><!-- .item end -->
+            </div><!-- .list04 end -->
+        </div><!-- .all_list end -->       
+    </div><!-- .cont01 end -->
+    <div class="cont02">
+        <div class="title">
+            <h1>
+                <strong>BRAND STORY</strong>
+            </h1>
+        </div><!-- .title end -->
+        <div class="list">
+            <div class="you">
+                <div class="youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/d-U7gVRuDr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div><!-- .you ned -->
+            <div class="tit">
+                <P class="main">황실에 바치는 차(茶), 공차를 소개합니다.</P>
+                <P class="txt">貢茶는 바칠 공, 차 차의 뜻으로 중국 황실에서만 맛 볼 수 있던 프리미엄 퀄리티의<br>
+                    차(茶)를 바친다는 의미를 지니고 있습니다.<br>
+                    대만은 차나무가 자라기에 최적의 기온과 기상조건을 가지고 있어 중국의<br>
+                    황실에 최고급 차 잎을 생산해낼 수 있었습니다.<br></P>
+                <p class="txt2">중국 황실에 진상하던 대만의 프리미엄 잎차를 신선하게 우려낸 차, 그것이 바로 공차랍니다.</P>
+            </div><!-- .tit end -->
+        </div><!-- .lsit end --> 
+
+    </div><!-- .cont02 end -->
+    
+    <div class="cont03">
+        <div class="title">
+            <h1>공차 티 레시피</h1>
+            <h2>TEA RECIPE - 티 레시피</h2>
+        </div><!-- .title end -->
+        <div class="tab_menu">
+            <ul>
+                <li>오리지널 티</li>
+                <li>밀크티</li>
+                <li>과일믹스</li>
+            </ul>
+            <div class="bar">
+                <span>메뉴막대바에요</span>
+            </div><!-- .bar end -->
+        </div><!-- .tab_menu end -->
+        <div class="list">
+            <div class="item on">
+                <img src="img/imgcha01.jpg" alt="차레시피" />
+                <div>
+                    <h4>오리지널 티 - Original Tea</h4>
+                    <p>티백이나 가루가 아닌 황실에 바치던 잎차만 골라 1도 1초도 어기지 않고 차마다<br>
+                        다른 황금률로 우려 한 잔 한 잔 부드러움을 더해 만듭니다.</p>
+                    <a href="#" class="btn"><span>메뉴 보러가기</span></a>
+                </div>
+            </div><!-- .item end 01 -->
+
+            <div class="item">
+                <img src="img/imgcha02.jpg" alt="차레시피" />
+                <div>
+                    <h4>밀크티 - Milk Tea</h4>
+                    <p>최적의 자연이 키워낸 입차만 골라 각 차종에 맞는 황금률로 우려 담백한 우유와<br>
+                        허니, 카라멜 등 새로운 맛을 더해 만듭니다.</p>
+                    <a href="#" class="btn"><span>메뉴 보러가기</span></a>
+                </div>
+            </div><!-- .item end 02 -->
+
+            <div class="item">
+                <img src="img/imgcha03.jpg" alt="차레시피" />
+                <div>
+                    <h4>과일믹스 - Fruit Mix</h4>
+                    <p>찻잎의 푸름을 간직한 녹차만 골라 최적의 온도 89℃로 우려<br>
+                        달콤상큼한 과일을 더해 만듭니다.</p>
+                    <a href="#" class="btn"><span>메뉴 보러가기</span></a>
+                </div>
+            </div><!-- .item end 03 -->
+
+        </div><!-- .list ned -->
+    </div><!-- .cont03 end -->
+    <div class="cont04">
+        <li class="store">
+            <div class="title">
+                    <h1>
+                        <strong>진행중인 이벤트</strong>
+                    </h1>
+            </div><!-- .title end -->
+            <div class="event_all">
+                <div class="event">
+                    <img src="img/goimg10.jpg" alt="이벤트" />
+                </div><!-- .event end -->
+                <div class="tit">
+                    <h4>멤버십 회원 누구나, 토.핑.무.료! 단, 3일간! </h4>
+                    <p>2022년 08월 29일(월) ~ 2022년 08월 31일(수)</p>
+                    <a href="#">자세히보기</a>
+                </div><!-- .tit end -->
+            </div>    
+        </li><!-- .store end -->
+    </div><!-- .cont04 end -->
+    <footer>
+        <div class="footerwrap">
+            <P class="logo">
+                <img src="img/imglogo.png" alt="logo" />
+            </P><!-- .logo end -->
+            <div class="info">
+                <ul>
+                    <li>회사소개 제휴/제안 고객센터 개인정보처리방침 이메일무단수집거부 HOT-LINE 사이트맵</li>
+                </ul>
+                <address>
+                    <ul>
+                        <li>고객센터 02-779-7758 (운영시간: 오전 9시 30분 ~ 오후 5시 30분 / 점심시간: 낮 12시 ~ 오후 1시 / 주말 및 공휴일 휴무)</li>
+                    </ul>
+                </address>
+                <address>
+                    <ul>
+                        <li>서울 종로구 종로 47(공평동, 7층)㈜공차코리아 대표이사 이봉진사업자등록번호 214-88-84534통신판매번호: 2020-서울종로-0966</li>
+                    </ul>
+                </address>
+            </div><!-- .info end -->
+        </div><!-- .footerwrap end -->
+    </footer>
+
+    
+</body>
+</html>
