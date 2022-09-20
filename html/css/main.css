@@ -1,5 +1,23 @@
 @charset "utf-8";
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+    font-family: 'HSGaeulSenggak20';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSGaeulSenggak20.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JSongMyung-Regular-KO';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JSongMyung-Regular-KO.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -24,6 +42,7 @@ body {
 }
 section .title {
     margin-bottom: 40px;
+    font-family: 'KOTRA_BOLD-Bold';
 }
 section .title h3 {
     font-size: 50px;
@@ -32,7 +51,10 @@ section .title p {
     font-size: 20px;
 }
 /* header */
-header {}
+header {
+    background-color: rgb(16, 16, 16);
+    color: #fff;
+}
 header .inner {
     height: 100px;
     display: flex;
@@ -47,6 +69,7 @@ header .inner h1 a {}
 header .inner nav {}
 header .inner nav ul {
     display: flex;
+    font-family: 'HSGaeulSenggak20';
     font-size: 18px;
 }
 header .inner nav ul  li {}
@@ -117,6 +140,8 @@ header .inner nav ul  li  a {
 /* .cont01 영상편집 */
 .cont01 {
     padding: 200px 0;
+    background-image: url(/img/autumn-4454097_960_720.jpg);
+    background-size: 100% 100%;
 }
 .cont01 .motion_menu {
     display: inline-block;
@@ -128,14 +153,16 @@ header .inner nav ul  li  a {
     background-color: #eee;
     height: 40px;
     border-radius: 40px;
+    font-family: 'HSGaeulSenggak20';
 }
 .cont01 .motion_menu ul li {
     padding: 0 30px;
     font-size: 14px;
     cursor: pointer;
+    font-family: 'HSGaeulSenggak20';
 }
 .cont01 .motion_menu ul li.on{
-    background-color: tomato;
+    background-color: rgb(178 30 2);
     color: #fff;
     height: 100%;
     line-height: 40px;
@@ -148,6 +175,7 @@ header .inner nav ul  li  a {
 .cont01 .mySwiper .item {
     display: flex;
     justify-content: space-between;
+    font-family: 'JSongMyung-Regular-KO';
 }
 .cont01 .mySwiper .item .pc_youtube {
     width: 55%;
@@ -185,10 +213,10 @@ header .inner nav ul  li  a {
     margin-bottom: 20px;
 }
 .cont01 .mySwiper .item .info h4 {
-    font-size: 34px;
+    font-size: 40px;
 }
 .cont01 .mySwiper .item .info p {
-    font-size: 20px;
+    font-size: 24px;
     border-top: 1px solid #ccc;
     margin-top: 20px;
     padding-top: 20px;
@@ -206,12 +234,13 @@ header .inner nav ul  li  a {
 
 .cont01 .mySwiper .item .info .btn {
     display: flex;
+    font-family: 'HSGaeulSenggak20';
 }
 .cont01 .mySwiper .item .info .btn li {
     height: 40px;
     line-height: 40px;
     border-radius: 40px;
-    background-color: tomato;
+    background-color: rgb(178 30 2);
     color: #fff;
     margin-right: 10px;
 } 
@@ -230,6 +259,14 @@ header .inner nav ul  li  a {
     margin: 200px auto;  */
     background-color: #eee;
     padding: 200px 0;
+    background-image: url(/img/img.101.webp);
+    background-size: 100% 100%;
+}
+.cont03 .title {
+    color: #fff;
+}
+.cont03 .title p {
+    margin-top: 10px;
 }
 .cont03 .list {
     height: 85vh;
@@ -247,7 +284,7 @@ header .inner nav ul  li  a {
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgba(221, 245, 178, 0.571);
+    background-color: rgba(253, 208, 104, 0.571);
     position: absolute;
     bottom: -100%;
     left: 0;
@@ -277,6 +314,7 @@ header .inner nav ul  li  a {
     bottom: 0;
     word-break: keep-all;
     transition: 5s;
+    font-family: 'JSongMyung-Regular-KO';
 }
 .cont03 .list .item .info h4 {
     font-size: 30px;
@@ -291,12 +329,14 @@ header .inner nav ul  li  a {
     margin: 5px 0;
 }
 .cont03 .list .item .info .btn {
+    color: #fff;
     display: flex;
     margin-top: 40px;
+    font-family: 'HSGaeulSenggak20';
 }
 .cont03 .list .item .info .btn li {
     margin-right: 10px;
-    background-color: #eee;
+    background-color: rgb(178 30 2);
 }
 .cont03 .list .item .info .btn li a {
     height: 45px;
@@ -312,6 +352,8 @@ header .inner nav ul  li  a {
     background-color: rgb(235, 192, 134);
     color: #fff;
     padding: 200px 0;
+    background-image: url(/img/img.99.webp);
+    background-size: 100% 100%;
 }
 .cont04 .title {
     text-align: center;
@@ -320,6 +362,7 @@ header .inner nav ul  li  a {
 .cont04 .list {
     display: flex;
     justify-content: space-between;
+    font-family: 'JSongMyung-Regular-KO';
 }
 .cont04 .list a {
     width: 19%;
@@ -344,6 +387,7 @@ header .inner nav ul  li  a {
 /* .cont05 나의소개 */
 .cont05 {
     padding: 200px 0;
+    background-image: url(/img/img.55.webp);
 }
 .cont05 .info {
     display: flex;
@@ -369,6 +413,7 @@ header .inner nav ul  li  a {
     flex-wrap: wrap;
     font-size: 20px;
     margin-bottom: 20px;
+    font-family: 'JSongMyung-Regular-KO';
 }
 .cont05 .info .text ul li {
     line-height: 1.4;
@@ -380,6 +425,7 @@ header .inner nav ul  li  a {
 
 .cont05 .info .text .list {
     margin-top: 50px;
+    font-family: 'HSGaeulSenggak20';
 }
 .cont05 .info .text .list li {
     height: 50px;
@@ -391,7 +437,7 @@ header .inner nav ul  li  a {
     font-size: 16px;
 }
 .cont05 .info .text .list li.v {
-    background-color: rgb(235, 192, 134);
+    background-color: rgb(178 30 2);
     color: #fff;
 }
 
@@ -399,17 +445,20 @@ header .inner nav ul  li  a {
 footer {
     padding: 70px 0;
     background-color: #333;
+    background-image: url(/img/autumn-2857032_960_720.webp);
     color: #fff;
     text-align: center;
+    background-size: 100% 100%;
 }
 footer ul {
     margin-bottom: 50px;
+    font-family: 'HSGaeulSenggak20';
 }
 footer ul li {
     height: 50px;
     line-height: 50px;
     width: 200px;
-    background-color: rgb(235, 192, 134);
+    background-color: rgb(178 30 2);
     color: #fff;
     margin: 10px auto;
     border-radius: 40px;
@@ -418,8 +467,9 @@ footer ul li a {
     display: block;
 }
 footer p {
+    font-family: 'JSongMyung-Regular-KO';
     margin-bottom: 10px;
-    font-size: 14px;
-    color: rgb(250, 245, 245);
+    font-size: 16px;
+    color:rgb(178 30 2);
     line-height: 1.4;
 }
