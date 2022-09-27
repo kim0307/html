@@ -364,8 +364,15 @@ header .inner nav ul  li  a {
     justify-content: space-between;
     font-family: 'JSongMyung-Regular-KO';
 }
+.cont04 .list a.item0 {opacity: 1; transition: 0.5s;}
+.cont04 .list a.item1 {opacity: 1; transition: 1s 1s;}
+.cont04 .list a.item2 {opacity: 1; transition: 1s 1.5s;}
+.cont04 .list a.item3 {opacity: 1; transition: 1s 2s;}
+.cont04 .list a.item4 {opacity: 1; transition: 1s 2.5s;}
+
 .cont04 .list a {
     width: 19%;
+    opacity: 0;
 } 
 .cont04 .list a img {
     width: 100%;
